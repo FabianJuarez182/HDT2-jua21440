@@ -7,9 +7,6 @@
  */
 public class Vista{
 
-    public void bienvenida() {
-        System.out.println("------------- Bienvenido/bienvenida a su calculadora postfix ---------------- "); // Titulo
-    }
     public void mensaje(String mensaje){
         System.out.println(mensaje);
     }
