@@ -15,19 +15,20 @@ public class Controladora{
         PosfixCalc miCalc = new PosfixCalc();
         File doc = new File("datos.txt");
         Scanner obj = new Scanner(doc);
-        String dato = String.valueOf(obj).trim();
-        if(dato.length()>0){
-            miVista.mensaje("Operacion: " + dato);
-            miVista.mensaje("Resultado de la operacion: " + String.valueOf(miCalc.Evaluate(dato)));
-        }
-        else{
-            miVista.mensaje("No existen operaciones en el archivo");
-        }
+        String dato;
+        int contadorLineas=0;
+        miVista.mensaje("");
         while (obj.hasNextLine()){
+            dato = obj.nextLine().trim();
+            contadorLineas++;
+            if(dato.length()>0){
+                miVista.mensaje("Operacion: " + dato);
+                miVista.mensaje("Resultado de la operacion: " + String.valueOf(miCalc.Evaluate(dato)));
+            }
+            else{
+                miVista.mensaje("No existen operaciones en la linea " + contadorLineas);
+            }
             miVista.mensaje("------------------------------");
-            dato = String.valueOf(obj.nextLine()).trim();
-            miVista.mensaje("Operacion: " + dato);
-            miVista.mensaje("Resultado de la operacion: " + String.valueOf(miCalc.Evaluate(dato)));
         }
         obj.close();
 
