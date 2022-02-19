@@ -7,6 +7,10 @@
  */
 public class Vista{
 
+    
+    /** 
+     * @param mensaje
+     */
     public void mensaje(String mensaje){
         System.out.println(mensaje);
     }

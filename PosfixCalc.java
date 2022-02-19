@@ -6,6 +6,11 @@
  * @author Fabian Juarez
  */
 public class PosfixCalc implements  IPosfixCalc {
+
+    /**
+     * @param expresion
+     * @return int
+     */
     @Override
     public int Evaluate(String expresion) {
         int calculo = 0 ;
@@ -22,7 +27,6 @@ public class PosfixCalc implements  IPosfixCalc {
         for (int i = 0; i<expresionSplit.length; i++ ){
             tmpTexto = expresionSplit[i];
             // Se verifica que el numero que viene en el texto es correcto
-            //isNumeric = tmpTexto.matches("[-]?\\d*(\\.\\d+)?");
             try {
                 Integer.parseInt(tmpTexto);
                 isNumeric = true;

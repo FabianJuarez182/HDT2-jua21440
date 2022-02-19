@@ -9,6 +9,11 @@ import java.io.File;
 import java.util.Scanner;
 
 public class Controladora{
+
+    /** 
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         //Atributos
         Vista miVista = new Vista();

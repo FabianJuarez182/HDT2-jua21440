@@ -9,12 +9,20 @@ import java.util.*;
 public class Stack implements IStack<Integer>{
     Vector miVector = new Vector();
 
+    
+    /** 
+     * @return int
+     */
     @Override
     public int count() {
         int longitud = miVector.size();
         return longitud;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     @Override
     public boolean isEmpty() {
         boolean result ;
@@ -27,6 +35,10 @@ public class Stack implements IStack<Integer>{
         return result;
     }
 
+    
+    /** 
+     * @return Integer
+     */
     @Override
     public Integer peek() {
         Integer numero;
@@ -39,6 +51,10 @@ public class Stack implements IStack<Integer>{
         return numero;
     }
 
+    
+    /** 
+     * @return Integer
+     */
     @Override
     public Integer pull() {
         Integer numero;
@@ -52,6 +68,10 @@ public class Stack implements IStack<Integer>{
         return numero;
     }
 
+    
+    /** 
+     * @param value
+     */
     @Override
     public void push(Integer value) {
         miVector.addElement(value);
