@@ -15,7 +15,6 @@ public class PosfixCalc implements  IPosfixCalc {
     public int Evaluate(String expresion) {
         int calculo = 0 ;
         Stack pila = new Stack();
-        Vista miVista = new Vista();
         String tmpTexto = "";
         boolean isNumeric = false;
         int numValido = 0;
@@ -58,7 +57,7 @@ public class PosfixCalc implements  IPosfixCalc {
                         }
                         else if(tmpTexto.equals("/")) {
                             if(operandoB == 0){
-                                miVista.mensaje("Error! Division por 0");
+                                System.out.println("Error! Division por 0");
                                 existeError = true;
                                 break;
                             }
@@ -69,13 +68,13 @@ public class PosfixCalc implements  IPosfixCalc {
                         }
                     }
                     else{
-                        miVista.mensaje("Error! Insufiecientes operandos para realizar la operacion ["+tmpTexto+"]");
+                        System.out.println("Error! Insufiecientes operandos para realizar la operacion ["+tmpTexto+"]");
                         existeError = true;
                         break;
                     }
                 }
                 else{
-                    miVista.mensaje("Error! Operador invalido ["+tmpTexto+"]");
+                    System.out.println("Error! Operador invalido ["+tmpTexto+"]");
                     existeError = true;
                     break;
                 }
@@ -87,7 +86,7 @@ public class PosfixCalc implements  IPosfixCalc {
                 return calculo;
             }
             else{
-                miVista.mensaje("Error! Insuficientes Operadores");
+                System.out.println("Error! Insuficientes Operadores");
             }
         }
         return calculo;
